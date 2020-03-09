@@ -4,7 +4,7 @@
   "description": "ES6, Node and Sharp image controler",
   "main": "dist",
   "scripts": {
-    "dev": "nodemon -w index.js --exec \"babel-node inex.js --presets es2015,stage-0\"",
+    "dev": "nodemon -w index.js --exec \"babel-node index.js --presets es2015,stage-0\"",
     "build": "babel index.js -s -D -d dist --presets es2015,stage-0",
     "start": "node dist",
     "prestart": "npm run -s build",

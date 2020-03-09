@@ -36,7 +36,7 @@ const transform = ({
     sharpObj.blur(Math.min(1000, Math.max(blur, 0.3)))
   }
   sharpObj.jpeg({
-    quality: isNumeric(quality) ? Math.max(1, Math.min(100, quality)) : 80,
+    quality: isNumeric(quality) ? Math.max(1, Math.min(100, quality)) : 65,
   })
   if (sharp.toFormat) {
     sharpObj.toFormat(toFormat)
@@ -45,13 +45,10 @@ const transform = ({
 }
 app.get('/example.png')
 app.get('/*', (req, res) => {
-	const { blur, h, w, q, e, d } = req.query;
+	const { blur, h, w, q, e } = req.query;
   let url = 'http://localhost:8808/example.png';
   if(req.query.f != undefined) {
-    const elensMediaUrl = 'https://media.e-lens.com.br/'
-    const eoticaMediaUrl = 'https://media.eotica.com.br/'
-    if(d == 'eo'){ url = eoticaMediaUrl + req.query.f }
-    if(d == 'el'){ url = elensMediaUrl + req.query.f }
+    url = req.query.f
   }
   res.setHeader('ETag', etag(req.url))
   res.type(e || 'webp');
