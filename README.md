@@ -5,7 +5,6 @@ This is using ES6, Sharp, Express and Axios to manipulate images
 - Image Manipulation via [sharp](https://github.com/lovell/sharp)
 - HTTP Server via [express](https://expressjs.com/)
 - [Axios](https://github.com/axios/axios)
-- 
 
 ----------------------------
 I suppose you have `node`, `git` and knowledge in this simple steps if not, see this tutorial about nvm installation [tutorial EN](https://www.keycdn.com/blog/node-version-manager), and [NVM official repository](https://github.com/nvm-sh/nvm) 
