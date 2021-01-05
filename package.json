@@ -28,7 +28,7 @@
   "author": "Gabriel Gripp",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "etag": "^1.8.1",
     "express": "^4.13.3",
     "morgan": "^1.8.0",
